@@ -4,183 +4,1098 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diretório Paroquial 2022 - Paróquia São Daniel Comboni</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-        body { padding: 15px; font-size: 14px; line-height: 1.6; color: #333; background: #fff; }
-        .header { text-align: center; background: linear-gradient(135deg, #2c5e92, #1a3a5f); color: #fff; padding: 25px 15px; border-radius: 10px; margin-bottom: 25px; }
-        .header h1 { font-size: 24px; margin-bottom: 10px; }
-        .badge { display: inline-block; background: #4a8c4a; color: #fff; padding: 8px 20px; border-radius: 20px; font-size: 13px; margin-top: 15px; }
-        h1 { font-size: 22px; color: #2c5e92; margin: 25px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #2c5e92; }
-        h2 { font-size: 18px; color: #8B4513; margin: 20px 0 12px; }
-        .highlight { background: #f0f8ff; padding: 15px; border-left: 5px solid #2c5e92; margin: 20px 0; border-radius: 0 8px 8px 0; }
-        .info-box { background: #f9f5e9; border: 1px solid #e6d7b8; padding: 15px; margin: 18px 0; border-radius: 8px; }
-        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 13px; }
-        table th { background: #2c5e92; color: #fff; padding: 12px 10px; text-align: left; }
-        table td { padding: 10px; border-bottom: 1px solid #e0e0e0; }
-        table tr:nth-child(even) { background: #f8f9fa; }
-        ul, ol { padding-left: 25px; margin-bottom: 18px; }
-        li { margin-bottom: 8px; }
-        .community-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; margin: 20px 0; }
-        .community-card { background: #fff; border-radius: 8px; padding: 15px; box-shadow: 0 3px 6px rgba(0,0,0,0.08); border-top: 4px solid #8B4513; }
-        footer { text-align: center; padding: 25px 15px; margin-top: 40px; color: #666; font-size: 12px; border-top: 2px solid #ddd; background: #f9f9f9; }
-        @media (max-width: 600px) { body { padding: 10px; font-size: 13px; } .community-grid { grid-template-columns: 1fr; } }
-        @media print { .print-controls { display: none !important; } body { font-size: 12px; } h1 { font-size: 18px; } h2 { font-size: 16px; } }
-    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <!-- Controles -->
-    <div class="print-controls" style="text-align:center;padding:15px;background:linear-gradient(135deg,#2c5e92,#1a3a5f);color:#fff;border-radius:10px;margin-bottom:20px">
-        <button onclick="generatePDF()" style="background:#4a8c4a;color:#fff;border:none;padding:12px 25px;border-radius:5px;font-weight:bold;cursor:pointer;margin:10px">
-            <i class="fas fa-file-pdf"></i> Gerar PDF
-        </button>
-        <button onclick="window.print()" style="background:#2196F3;color:#fff;border:none;padding:12px 25px;border-radius:5px;font-weight:bold;cursor:pointer;margin:10px">
-            <i class="fas fa-print"></i> Imprimir
-        </button>
-        <p style="font-size:12px;margin-top:5px">Documento otimizado para smartphones</p>
-    </div>
-
-    <!-- Cabeçalho -->
-    <div class="header">
-        <h1>Diretório Paroquial 2022</h1>
-        <p>Paróquia São Daniel Comboni - Arquidiocese de São Luís</p>
-        <p>Vila Embratel - São Luís - Maranhão</p>
-        <div class="badge">Documento Aprovado em 04 de dezembro de 2022</div>
-    </div>
-
-    <!-- Índice -->
-    <div id="indice">
-        <h1><i class="fas fa-list"></i> Índice do Documento</h1>
-        <ol style="columns:2;column-gap:30px;">
-            <li><a href="#apresentacao">Apresentação</a></li>
-            <li><a href="#identidade">Identidade e Estrutura</a></li>
-            <li><a href="#comunidades">Comunidades</a></li>
-            <li><a href="#missao">Missão Pastoral</a></li>
-            <li><a href="#instancias">Instâncias Deliberativas</a></li>
-            <li><a href="#coordenacao">Coordenação</a></li>
-            <li><a href="#social">Dimensão Social</a></li>
-            <li><a href="#liturgico">Dimensão Litúrgica</a></li>
-            <li><a href="#ivc">Iniciação à Vida Cristã</a></li>
-            <li><a href="#batismo">Sacramento do Batismo</a></li>
-            <li><a href="#eucaristia">Primeira Eucaristia</a></li>
-            <li><a href="#confirmacao">Sacramento da Confirmação</a></li>
-            <li><a href="#matrimonio">Sacramento do Matrimônio</a></li>
-            <li><a href="#conclusao">Conclusão</a></li>
-        </ol>
-    </div>
-
-    <!-- Seção 1: Apresentação -->
-    <div id="apresentacao">
-        <h1><i class="fas fa-file-alt"></i> 1. Apresentação</h1>
-        <div class="highlight">
-            <p>O presente diretório paroquial recolhe e apresenta de forma sistematizada as principais decisões, orientações, dicas e sugestões que emergiram ao longo dos últimos anos de caminhada nas diferentes dimensões pastorais da Paróquia São Daniel Comboni, em São Luís.</p>
-        </div>
-        <p>É a expressão de uma vivência de fé, reflexão e discernimento. Não pretende ser um documento concluso e fechado, mas uma referência para a pastoral e administração paroquial, um documento que está sempre em construção e atualização.</p>
-        <div class="info-box">
-            <h4><i class="fas fa-info-circle"></i> Contexto do Documento</h4>
-            <p>Este diretório foi inicialmente elaborado e aprovado em assembleia paroquial no dia 30 de novembro de 2014 e adotado em caráter experimental por um ano, sendo finalmente aprovado na assembleia paroquial de 2015. Decorridos alguns anos, houve a necessidade de ser atualizado, o que ocorreu no dia 04 de dezembro na assembleia paroquial de 2022.</p>
-        </div>
-        <p>Confiamos esse diretório paroquial e a nossa missão à intercessão da Santa Virgem Maria e de São Daniel Comboni.</p>
-    </div>
-
-    <!-- Seção 2: Identidade -->
-    <div id="identidade">
-        <h1><i class="fas fa-church"></i> 2. Identidade e Estrutura da Paróquia</h1>
-        <p>A paróquia São Daniel Comboni, pertencente à Arquidiocese de São Luís e confiada aos cuidados pastorais dos Missionários Combonianos, localizada na Vila Embratel, em São Luís, Maranhão, se constitui como <strong>'Comunidade de Comunidades'</strong>.</p>
-        <div class="highlight">
-            <p>Não possui uma igreja matriz, mas uma rede de <strong>14 comunidades autônomas e interdependentes</strong> que recebem igual acompanhamento pastoral e serviço ministerial.</p>
-        </div>
-        <h2>Organização em Setores</h2>
-        <p>Essas mesmas comunidades, para atender a algumas necessidades formativas ou celebrativas, organizam-se também em setores:</p>
-        <div class="community-grid">
-            <div class="community-card"><h4>Setor 01</h4><p>• Nossa Senhora do Povo</p><p>• Nossa Senhora de Fátima</p><p>• Cristo Redentor</p><p>• Sagrada Família</p></div>
-            <div class="community-card"><h4>Setor 02</h4><p>• Nossa Senhora da Vitória</p><p>• São João Batista</p></div>
-            <div class="community-card"><h4>Setor 03</h4><p>• Santa Luzia</p><p>• Nossa Senhora da Libertação</p></div>
-            <div class="community-card"><h4>Setor 04</h4><p>• Santa Isabel</p><p>• Nossa Senhora da Esperança</p></div>
-            <div class="community-card"><h4>Setor 05</h4><p>• São José</p><p>• São João Batista da Boa Vista</p><p>• São Benedito</p><p>• Nossa Senhora da Conceição</p></div>
-        </div>
-    </div>
-
-    <!-- Seção 3: Comunidades -->
-    <div id="comunidades">
-        <h1><i class="fas fa-users"></i> 3. Comunidades, Festejos e Localização</h1>
-        <table>
-            <thead><tr><th>Comunidade</th><th>Mês Festejo</th><th>Bairro</th><th>Endereço</th></tr></thead>
-            <tbody>
-                <tr><td><strong>01. Nossa Senhora do Povo</strong></td><td>Novembro</td><td>Vila Embratel</td><td>Rua 18 Quadra 31 – Nº 14</td></tr>
-                <tr><td><strong>02. Nossa Senhora de Fátima</strong></td><td>Maio</td><td>Resende/V. Embratel</td><td>Rua Girassol, S/N</td></tr>
-                <tr><td><strong>03. Cristo Redentor</strong></td><td>Novembro</td><td>Residencial Paraíso</td><td>Avenida Principal, S/N</td></tr>
-                <tr><td><strong>04. Sagrada Família</strong></td><td>Dezembro</td><td>Piancó</td><td>Avenida Piancó, S/N</td></tr>
-                <tr><td><strong>05. Nossa Senhora da Vitória</strong></td><td>Novembro</td><td>Sá Viana</td><td>Av. Cônego Ribamar Carvalho, S/N</td></tr>
-                <tr><td><strong>06. São João Batista</strong></td><td>Junho</td><td>Jambeiro</td><td>Rua São Francisco, S/N</td></tr>
-                <tr><td><strong>07. Nossa Senhora da Esperança</strong></td><td>Agosto</td><td>Vila Embratel</td><td>Rua 06 de Abril, Nº 10A</td></tr>
-                <tr><td><strong>08. Santa Isabel</strong></td><td>Julho</td><td>Vila Isabel</td><td>Travessa Jairzinho, nº 11</td></tr>
-                <tr><td><strong>09. Nossa Senhora da Libertação</strong></td><td>Setembro</td><td>Vila Bacanga</td><td>Rua Pereira Ramos, S/N</td></tr>
-                <tr><td><strong>10. Santa Luzia</strong></td><td>Dezembro</td><td>Vila Dom Luís</td><td>Rua São Pedro, S/N</td></tr>
-                <tr><td><strong>11. São José</strong></td><td>Março</td><td>Res. Primavera</td><td>Rua Tancredo Neves, S/N</td></tr>
-                <tr><td><strong>12. São João da Boa Vista</strong></td><td>Junho</td><td>Vila São João</td><td>Rua Dom Paulo Pontes, S/N</td></tr>
-                <tr><td><strong>13. São Benedito</strong></td><td>Setembro</td><td>Argola e Tambor</td><td>Rua Bom Viver, S/N (C. Nova)</td></tr>
-                <tr><td><strong>14. Nossa Senhora da Conceição</strong></td><td>Dezembro</td><td>Gapara</td><td>Av. do Cajueiro, S/N</td></tr>
-            </tbody>
-        </table>
-        <div class="info-box"><h4><i class="fas fa-map-marker-alt"></i> Informações Geográficas</h4><p>A paróquia está localizada na região da Vila Embratel em São Luís, Maranhão, atendendo a diversas comunidades distribuídas em diferentes bairros da região.</p></div>
-    </div>
-
-    <!-- Seção 4: Missão -->
-    <div id="missao">
-        <h1><i class="fas fa-cross"></i> 4. Missão e Objetivo Pastoral</h1>
-        <div class="highlight">
-            <p>Anunciar e testemunhar a Boa Nova a partir de um profundo conhecimento bíblico e de uma autêntica relação com Jesus Cristo, inspirados pelo carisma de Daniel Comboni e em rede solidária e sinodal de comunidades.</p>
-        </div>
-        <h2>Opção Preferencial</h2>
-        <p>Optamos pelos mais pobres, os doentes, os presos, os dependentes químicos e os excluídos de nossa paróquia, contribuindo como verdadeiros missionários e missionárias do Pai com a construção de uma sociedade de justiça, dignidade e paz.</p>
-        <div class="info-box"><h4><i class="fas fa-heart"></i> Inspiração Comboniana</h4><p>Daniel Comboni (1831-1881) foi um bispo católico e missionário italiano, fundador dos Missionários Combonianos. Sua espiritualidade missionária caracteriza-se pela opção preferencial pelos mais pobres e marginalizados.</p></div>
-        <h2>Dimensões da Missão</h2>
-        <ul>
-            <li><strong>Anúncio:</strong> Proclamar a Boa Nova de Jesus Cristo em palavras e ações.</li>
-            <li><strong>Testemunho:</strong> Vivência coerente da fé cristã no cotidiano.</li>
-            <li><strong>Formação:</strong> Profundo conhecimento bíblico e teológico.</li>
-            <li><strong>Comunhão:</strong> Rede solidária e sinodal de comunidades.</li>
-            <li><strong>Serviço:</strong> Opção preferencial pelos mais pobres e excluídos.</li>
-            <li><strong>Transformação:</strong> Contribuição para uma sociedade justa e pacífica.</li>
-        </ul>
-    </div>
-
-    <!-- Rodapé -->
-    <footer>
-        <p><strong>Diretório Paroquial 2022</strong></p>
-        <p>Paróquia São Daniel Comboni - Arquidiocese de São Luís</p>
-        <p>Vila Embratel - São Luís - Maranhão</p>
-        <p style="margin-top:10px;color:#4a8c4a;font-weight:bold">Documento aprovado em assembleia paroquial em 04 de dezembro de 2022</p>
-        <p style="font-size:11px;margin-top:15px;color:#888"><i class="fas fa-mobile-alt"></i> Versão otimizada para smartphones</p>
-    </footer>
-
-    <script>
-        function generatePDF() {
-            alert('📱 Para gerar PDF:\n\n1. No diálogo de impressão, selecione "Salvar como PDF"\n2. Escolha orientação: "Retrato"\n3. Margens: "Padrão" ou "Mínimo"');
-            setTimeout(() => window.print(), 500);
+    <style>
+        /* ESTILOS GERAIS */
+        :root {
+            --tab1-color: #2c5e92;   --tab2-color: #8B4513;   --tab3-color: #4a8c4a;
+            --tab4-color: #9c27b0;   --tab5-color: #2196F3;   --tab6-color: #FF9800;
+            --tab7-color: #E91E63;   --tab8-color: #009688;   --tab9-color: #673AB7;
+            --tab10-color: #3F51B5;  --tab11-color: #00BCD4;  --tab12-color: #8BC34A;
+            --tab13-color: #FF5722;  --tab14-color: #795548;
         }
         
-        // Navegação suave
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 10px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* CABEÇALHO */
+        header {
+            background: linear-gradient(135deg, #2c5e92, #1a3a5f);
+            color: white;
+            padding: 25px 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        header h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        header .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
+        
+        .badge {
+            display: inline-block;
+            background-color: #4a8c4a;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        
+        /* CONTROLES */
+        .controls {
+            text-align: center;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.05);
+        }
+        
+        .print-btn {
+            background-color: #4a8c4a;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.3s;
+        }
+        
+        .print-btn:hover {
+            background-color: #3a7c3a;
+        }
+        
+        /* ÍNDICE */
+        #indice {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.05);
+        }
+        
+        #indice h1 {
+            color: #2c5e92;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #2c5e92;
+            padding-bottom: 8px;
+        }
+        
+        #indice ol {
+            columns: 2;
+            column-gap: 30px;
+        }
+        
+        #indice li {
+            margin-bottom: 10px;
+        }
+        
+        #indice a {
+            color: #2c5e92;
+            text-decoration: none;
+            padding: 5px 0;
+            display: block;
+            transition: color 0.3s;
+        }
+        
+        #indice a:hover {
+            color: #1a3a5f;
+            font-weight: bold;
+        }
+        
+        /* SEÇÕES/CONTEÚDO */
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.05);
+            page-break-inside: avoid;
+        }
+        
+        .section h1 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section h2 {
+            font-size: 18px;
+            margin: 20px 0 12px 0;
+            color: #555;
+        }
+        
+        .section h3 {
+            font-size: 16px;
+            margin: 18px 0 10px 0;
+            color: #666;
+        }
+        
+        .section h4 {
+            font-size: 15px;
+            margin: 15px 0 8px 0;
+            color: #777;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .section p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        
+        .highlight {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-left: 5px solid;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .info-box {
+            background-color: #f9f5e9;
+            border: 1px solid #e6d7b8;
+            padding: 15px;
+            margin: 18px 0;
+            border-radius: 8px;
+        }
+        
+        /* TABELAS */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        table th {
+            background-color: #2c5e92;
+            color: white;
+            padding: 12px 10px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        table td {
+            padding: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        table tr:hover {
+            background-color: #e9f7fe;
+        }
+        
+        /* LISTAS */
+        ul, ol {
+            padding-left: 25px;
+            margin-bottom: 18px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            padding-left: 5px;
+        }
+        
+        /* COMUNIDADES */
+        .community-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .community-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+            border-top: 4px solid #8B4513;
+        }
+        
+        .community-card h4 {
+            color: #2c5e92;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        /* RODAPÉ */
+        footer {
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 40px;
+            color: #666;
+            font-size: 13px;
+            border-top: 2px solid #ddd;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+        
+        /* CORES POR SEÇÃO */
+        #apresentacao h1 { color: var(--tab1-color); border-bottom-color: var(--tab1-color); }
+        #apresentacao .highlight { border-left-color: var(--tab1-color); }
+        
+        #identidade h1 { color: var(--tab2-color); border-bottom-color: var(--tab2-color); }
+        #identidade .highlight { border-left-color: var(--tab2-color); }
+        
+        #comunidades h1 { color: var(--tab3-color); border-bottom-color: var(--tab3-color); }
+        #comunidades .highlight { border-left-color: var(--tab3-color); }
+        
+        #missao h1 { color: var(--tab4-color); border-bottom-color: var(--tab4-color); }
+        #missao .highlight { border-left-color: var(--tab4-color); }
+        
+        #instancias h1 { color: var(--tab5-color); border-bottom-color: var(--tab5-color); }
+        #instancias .highlight { border-left-color: var(--tab5-color); }
+        
+        #coordenacao h1 { color: var(--tab6-color); border-bottom-color: var(--tab6-color); }
+        #coordenacao .highlight { border-left-color: var(--tab6-color); }
+        
+        #social h1 { color: var(--tab7-color); border-bottom-color: var(--tab7-color); }
+        #social .highlight { border-left-color: var(--tab7-color); }
+        
+        #liturgico h1 { color: var(--tab8-color); border-bottom-color: var(--tab8-color); }
+        #liturgico .highlight { border-left-color: var(--tab8-color); }
+        
+        #ivc h1 { color: var(--tab9-color); border-bottom-color: var(--tab9-color); }
+        #ivc .highlight { border-left-color: var(--tab9-color); }
+        
+        #batismo h1 { color: var(--tab10-color); border-bottom-color: var(--tab10-color); }
+        #batismo .highlight { border-left-color: var(--tab10-color); }
+        
+        #eucaristia h1 { color: var(--tab11-color); border-bottom-color: var(--tab11-color); }
+        #eucaristia .highlight { border-left-color: var(--tab11-color); }
+        
+        #confirmacao h1 { color: var(--tab12-color); border-bottom-color: var(--tab12-color); }
+        #confirmacao .highlight { border-left-color: var(--tab12-color); }
+        
+        #matrimonio h1 { color: var(--tab13-color); border-bottom-color: var(--tab13-color); }
+        #matrimonio .highlight { border-left-color: var(--tab13-color); }
+        
+        #conclusao h1 { color: var(--tab14-color); border-bottom-color: var(--tab14-color); }
+        #conclusao .highlight { border-left-color: var(--tab14-color); }
+        
+        /* RESPONSIVIDADE */
+        @media (max-width: 768px) {
+            body {
+                padding: 8px;
+            }
+            
+            .section {
+                padding: 20px 15px;
+            }
+            
+            .section h1 {
+                font-size: 20px;
+            }
+            
+            .section h2 {
+                font-size: 17px;
+            }
+            
+            #indice ol {
+                columns: 1;
+            }
+            
+            .community-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            table {
+                font-size: 13px;
+                display: block;
+                overflow-x: auto;
+            }
+        }
+        
+        /* IMPRESSÃO */
+        @media print {
+            .controls, #indice {
+                display: none !important;
+            }
+            
+            body {
+                padding: 0;
+                font-size: 12px;
+                background: white;
+            }
+            
+            .section {
+                box-shadow: none;
+                margin-bottom: 15px;
+                page-break-inside: avoid;
+            }
+            
+            .section h1 {
+                font-size: 18px;
+                page-break-after: avoid;
+            }
+            
+            .section h2 {
+                font-size: 16px;
+                page-break-after: avoid;
+            }
+            
+            table {
+                font-size: 11px;
+                page-break-inside: avoid;
+            }
+            
+            .highlight, .info-box {
+                page-break-inside: avoid;
+            }
+            
+            footer {
+                page-break-before: always;
+            }
+        }
+        
+        /* BOTÃO VOLTAR AO TOPO */
+        #backToTop {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #2c5e92;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+        
+        #backToTop:hover {
+            background: #1a3a5f;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- CABEÇALHO -->
+        <header>
+            <h1>Diretório Paroquial 2022</h1>
+            <div class="subtitle">Paróquia São Daniel Comboni - Arquidiocese de São Luís</div>
+            <div class="subtitle">Vila Embratel - São Luís - Maranhão</div>
+            <div class="badge">Documento Aprovado em 04 de dezembro de 2022</div>
+        </header>
+        
+        <!-- CONTROLES -->
+        <div class="controls">
+            <button class="print-btn" onclick="generatePDF()">
+                <i class="fas fa-file-pdf"></i> Gerar PDF
+            </button>
+            <button class="print-btn" onclick="window.print()">
+                <i class="fas fa-print"></i> Imprimir
+            </button>
+            <p style="font-size: 13px; margin-top: 10px; color: #666;">
+                <i class="fas fa-mobile-alt"></i> Documento otimizado para smartphones
+            </p>
+        </div>
+        
+        <!-- ÍNDICE -->
+        <div id="indice">
+            <h1><i class="fas fa-list"></i> Índice do Documento</h1>
+            <ol>
+                <li><a href="#apresentacao">1. Apresentação</a></li>
+                <li><a href="#identidade">2. Identidade e Estrutura</a></li>
+                <li><a href="#comunidades">3. Comunidades</a></li>
+                <li><a href="#missao">4. Missão Pastoral</a></li>
+                <li><a href="#instancias">5. Instâncias Deliberativas</a></li>
+                <li><a href="#coordenacao">6. Coordenação</a></li>
+                <li><a href="#social">7. Dimensão Social e Partilha</a></li>
+                <li><a href="#liturgico">8. Dimensão Litúrgica</a></li>
+                <li><a href="#ivc">9. Iniciação à Vida Cristã</a></li>
+                <li><a href="#batismo">10. Sacramento do Batismo</a></li>
+                <li><a href="#eucaristia">11. Primeira Eucaristia</a></li>
+                <li><a href="#confirmacao">12. Sacramento da Confirmação</a></li>
+                <li><a href="#matrimonio">13. Sacramento do Matrimônio</a></li>
+                <li><a href="#conclusao">14. Conclusão</a></li>
+            </ol>
+        </div>
+        
+        <!-- ========== SEÇÃO 1: APRESENTAÇÃO ========== -->
+        <div class="section" id="apresentacao">
+            <h1><i class="fas fa-file-alt"></i> 1. Apresentação</h1>
+            <div class="highlight">
+                <p>O presente diretório paroquial recolhe e apresenta de forma sistematizada as principais decisões, orientações, dicas e sugestões que emergiram ao longo dos últimos anos de caminhada nas diferentes dimensões pastorais da Paróquia São Daniel Comboni, em São Luís.</p>
+            </div>
+            
+            <p>É a expressão de uma vivência de fé, reflexão e discernimento. Não pretende ser um documento concluso e fechado, mas uma referência para a pastoral e administração paroquial, um documento que está sempre em construção e atualização.</p>
+            
+            <div class="info-box">
+                <h4><i class="fas fa-info-circle"></i> Contexto do Documento</h4>
+                <p>Este diretório foi inicialmente elaborado e aprovado em assembleia paroquial no dia 30 de novembro de 2014 e adotado em caráter experimental por um ano, sendo finalmente aprovado na assembleia paroquial de 2015. Decorridos alguns anos, houve a necessidade de ser atualizado, o que ocorreu no dia 04 de dezembro na assembleia paroquial de 2022.</p>
+            </div>
+            
+            <p>Confiamos esse diretório paroquial e a nossa missão à intercessão da Santa Virgem Maria e de São Daniel Comboni.</p>
+        </div>
+        
+        <!-- ========== SEÇÃO 2: IDENTIDADE ========== -->
+        <div class="section" id="identidade">
+            <h1><i class="fas fa-church"></i> 2. Identidade e Estrutura da Paróquia</h1>
+            
+            <p>A paróquia São Daniel Comboni, pertencente à Arquidiocese de São Luís e confiada aos cuidados pastorais dos Missionários Combonianos, localizada na Vila Embratel, em São Luís, Maranhão, se constitui como <strong>'Comunidade de Comunidades'</strong> (Cf. Documento 100 da CNBB - Comunidade de Comunidades: Uma Nova Paróquia).</p>
+            
+            <div class="highlight">
+                <p>Não possui uma igreja matriz, mas uma rede de <strong>14 comunidades autônomas e interdependentes</strong> que recebem igual acompanhamento pastoral e serviço ministerial.</p>
+            </div>
+            
+            <h2>Organização em Setores</h2>
+            <p>Essas mesmas comunidades, para atender a algumas necessidades formativas ou celebrativas, organizam-se também em setores:</p>
+            
+            <div class="community-grid">
+                <div class="community-card">
+                    <h4><i class="fas fa-1"></i> Setor 01</h4>
+                    <p>• Nossa Senhora do Povo</p>
+                    <p>• Nossa Senhora de Fátima</p>
+                    <p>• Cristo Redentor</p>
+                    <p>• Sagrada Família</p>
+                </div>
+                
+                <div class="community-card">
+                    <h4><i class="fas fa-2"></i> Setor 02</h4>
+                    <p>• Nossa Senhora da Vitória</p>
+                    <p>• São João Batista</p>
+                </div>
+                
+                <div class="community-card">
+                    <h4><i class="fas fa-3"></i> Setor 03</h4>
+                    <p>• Santa Luzia</p>
+                    <p>• Nossa Senhora da Libertação</p>
+                </div>
+                
+                <div class="community-card">
+                    <h4><i class="fas fa-4"></i> Setor 04</h4>
+                    <p>• Santa Isabel</p>
+                    <p>• Nossa Senhora da Esperança</p>
+                </div>
+                
+                <div class="community-card">
+                    <h4><i class="fas fa-5"></i> Setor 05</h4>
+                    <p>• São José</p>
+                    <p>• São João Batista da Boa Vista</p>
+                    <p>• São Benedito</p>
+                    <p>• Nossa Senhora da Conceição</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ========== SEÇÃO 3: COMUNIDADES ========== -->
+        <div class="section" id="comunidades">
+            <h1><i class="fas fa-users"></i> 3. Comunidades, Festejos e Localização</h1>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Comunidade</th>
+                        <th>Mês Festejo</th>
+                        <th>Bairro</th>
+                        <th>Endereço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>01. Nossa Senhora do Povo</strong></td><td>Novembro</td><td>Vila Embratel</td><td>Rua 18 Quadra 31 – Nº 14</td></tr>
+                    <tr><td><strong>02. Nossa Senhora de Fátima</strong></td><td>Maio</td><td>Resende/V. Embratel</td><td>Rua Girassol, S/N</td></tr>
+                    <tr><td><strong>03. Cristo Redentor</strong></td><td>Novembro</td><td>Residencial Paraíso</td><td>Avenida Principal, S/N</td></tr>
+                    <tr><td><strong>04. Sagrada Família</strong></td><td>Dezembro</td><td>Piancó</td><td>Avenida Piancó, S/N</td></tr>
+                    <tr><td><strong>05. Nossa Senhora da Vitória</strong></td><td>Novembro</td><td>Sá Viana</td><td>Av. Cônego Ribamar Carvalho, S/N</td></tr>
+                    <tr><td><strong>06. São João Batista</strong></td><td>Junho</td><td>Jambeiro</td><td>Rua São Francisco, S/N</td></tr>
+                    <tr><td><strong>07. Nossa Senhora da Esperança</strong></td><td>Agosto</td><td>Vila Embratel</td><td>Rua 06 de Abril, Nº 10A</td></tr>
+                    <tr><td><strong>08. Santa Isabel</strong></td><td>Julho</td><td>Vila Isabel</td><td>Travessa Jairzinho, nº 11</td></tr>
+                    <tr><td><strong>09. Nossa Senhora da Libertação</strong></td><td>Setembro</td><td>Vila Bacanga</td><td>Rua Pereira Ramos, S/N</td></tr>
+                    <tr><td><strong>10. Santa Luzia</strong></td><td>Dezembro</td><td>Vila Dom Luís</td><td>Rua São Pedro, S/N</td></tr>
+                    <tr><td><strong>11. São José</strong></td><td>Março</td><td>Res. Primavera</td><td>Rua Tancredo Neves, S/N</td></tr>
+                    <tr><td><strong>12. São João da Boa Vista</strong></td><td>Junho</td><td>Vila São João</td><td>Rua Dom Paulo Pontes, S/N</td></tr>
+                    <tr><td><strong>13. São Benedito</strong></td><td>Setembro</td><td>Argola e Tambor</td><td>Rua Bom Viver, S/N (C. Nova)</td></tr>
+                    <tr><td><strong>14. Nossa Senhora da Conceição</strong></td><td>Dezembro</td><td>Gapara</td><td>Av. do Cajueiro, S/N</td></tr>
+                </tbody>
+            </table>
+            
+            <div class="info-box">
+                <h4><i class="fas fa-map-marker-alt"></i> Informações Geográficas</h4>
+                <p>A paróquia está localizada na região da Vila Embratel em São Luís, Maranhão, atendendo a diversas comunidades distribuídas em diferentes bairros da região. Esta distribuição geográfica ampla exige uma organização em rede para melhor atender pastoralmente todas as comunidades.</p>
+            </div>
+        </div>
+        
+        <!-- ========== SEÇÃO 4: MISSÃO ========== -->
+        <div class="section" id="missao">
+            <h1><i class="fas fa-cross"></i> 4. Missão e Objetivo Pastoral</h1>
+            
+            <div class="highlight">
+                <p>Anunciar e testemunhar a Boa Nova a partir de um profundo conhecimento bíblico e de uma autêntica relação com Jesus Cristo, inspirados pelo carisma de Daniel Comboni e em rede solidária e sinodal de comunidades.</p>
+            </div>
+            
+            <h2>Opção Preferencial</h2>
+            <p>Optamos pelos mais pobres, os doentes, os presos, os dependentes químicos e os excluídos de nossa paróquia, contribuindo como verdadeiros missionários e missionárias do Pai com a construção de uma sociedade de justiça, dignidade e paz.</p>
+            
+            <div class="info-box">
+                <h4><i class="fas fa-heart"></i> Inspiração Comboniana</h4>
+                <p>Daniel Comboni (1831-1881) foi um bispo católico e missionário italiano, fundador dos Missionários Combonianos. Sua espiritualidade missionária caracteriza-se pela opção preferencial pelos mais pobres e marginalizados, pela valorização das culturas locais e pela formação de líderes locais.</p>
+            </div>
+            
+            <h2>Dimensões da Missão</h2>
+            <ul>
+                <li><strong>Anúncio:</strong> Proclamar a Boa Nova de Jesus Cristo em palavras e ações.</li>
+                <li><strong>Testemunho:</strong> Vivência coerente da fé cristã no cotidiano.</li>
+                <li><strong>Formação:</strong> Profundo conhecimento bíblico e teológico.</li>
+                <li><strong>Comunhão:</strong> Rede solidária e sinodal de comunidades.</li>
+                <li><strong>Serviço:</strong> Opção preferencial pelos mais pobres e excluídos.</li>
+                <li><strong>Transformação:</strong> Contribuição para uma sociedade justa e pacífica.</li>
+            </ul>
+        </div>
+        
+        <!-- ========== SEÇÃO 5: INSTÂNCIAS ========== -->
+        <div class="section" id="instancias">
+            <h1><i class="fas fa-sitemap"></i> 5. Instâncias e Órgãos Deliberativos</h1>
+            
+            <h2>A. Assembleia Paroquial</h2>
+            <p>A instância suprema de deliberação das prioridades e das metas pastorais. É convocada pelo pároco e procura estar sempre em comunhão com as prioridades pastorais da Arquidiocese.</p>
+            <ul>
+                <li>Realiza-se todo ano, em geral no mês de dezembro.</li>
+                <li>Prática consolidada: realizar também na metade do ano uma miniassembleia paroquial de caráter avaliativo e corretivo.</li>
+            </ul>
+            
+            <h2>B. Conselho Paroquial de Pastoral (CPP)</h2>
+            <p>Órgão de avaliação permanente, de execução e de deliberação de questões administrativas de caráter interno.</p>
+            <ul>
+                <li>Reúne-se nos meses de fevereiro, abril, junho, agosto e outubro.</li>
+                <li>Participam: pároco e demais padres, coordenadores de cada comunidade, das pastorais paroquiais, grupos e movimentos e representante das Religiosas/os.</li>
+            </ul>
+            
+            <h2>C. Participação Obrigatória</h2>
+            <p>A não participação de coordenadores e/ou representantes de uma comunidade, bem como de coordenadores de 'pastorais paroquiais' no Conselho Paroquial de Pastoral e/ou a sua não justificativa por mais de duas vezes implicará numa convocação de uma assembleia extraordinária na comunidade para discernir as causas e encontrar outro representante substituto.</p>
+            
+            <h2>D. Tomada de Decisões</h2>
+            <p>Em caso de indefinição sobre algumas decisões de caráter paroquial a serem tomadas, não haverá a utilização de votação, mas se procurará o consenso, ou uma consulta mais ampla em nível de paróquia.</p>
+            
+            <h2>E. Equipe Financeira Paroquial</h2>
+            <p>Em conjunto com a coordenação paroquial orienta, sugere e avalia a utilização e administração dos bens da paróquia, bem como outras questões menores.</p>
+            
+            <h2>F. Equipe de Reflexão</h2>
+            <p>Auxilia a coordenação paroquial na reflexão pastoral informal, no monitoramento da própria coordenação paroquial e da execução fiel das atividades pastorais. Reúne-se toda vez que achar necessário.</p>
+            
+            <h2>G. Encontros de Formação</h2>
+            <p>A paróquia promove também uma vez ao mês (meio-dia) encontros de formação bíblica, teológica e metodológica abertos a todas as comunidades.</p>
+            
+            <h2>H. Formação Especializada</h2>
+            <p>Os encontros formativos para Ministros da Palavra e para Catequistas terão uma atenção especial. A ausência repetida e não justificada de seus membros poderá implicar no seu afastamento temporário.</p>
+            
+            <h2>I. Pastorais e Movimentos</h2>
+            <p>A paróquia como um todo possui algumas pastorais e movimentos cujos representantes marcam presença nas instâncias diocesanas:</p>
+            <div style="columns: 2; column-gap: 30px; margin: 15px 0;">
+                <ul style="margin-bottom: 0;">
+                    <li>Pastoral Catequética</li>
+                    <li>Ministério da Eucaristia e da Palavra</li>
+                    <li>Pastoral do Menor</li>
+                    <li>Pastoral Carcerária</li>
+                    <li>Pastoral da Juventude</li>
+                    <li>Pastoral Familiar</li>
+                    <li>Pastoral do Dízimo</li>
+                    <li>PASCOM</li>
+                    <li>Terço dos Homens</li>
+                    <li>Legião de Maria</li>
+                </ul>
+            </div>
+            
+            <h2>J. Secretaria Paroquial</h2>
+            <p>Atende o público de terça a sexta-feira, das 8h às 18h, e no sábado até meio-dia, tendo como sede uma sala no Centro Pastoral São Oscar Romero, ao lado da Comunidade de Nossa Senhora do Povo.</p>
+        </div>
+        
+        <!-- ========== SEÇÃO 6: COORDENAÇÃO ========== -->
+        <div class="section" id="coordenacao">
+            <h1><i class="fas fa-user-tie"></i> 6. Coordenação e Conselho das Comunidades</h1>
+            
+            <h2>Composição da Coordenação</h2>
+            <p>Cada coordenação de comunidade é formada por três coordenadores/as e um conselho representativo das diferentes equipes, grupos reconhecidos pela Paróquia e/ou pastorais da comunidade.</p>
+            
+            <h2>Missão da Coordenação da Comunidade</h2>
+            <ol>
+                <li><strong>Garantir e favorecer a formação</strong> bíblica, teológica, catequética, litúrgica e espiritual de todos os batizados.</li>
+                <li><strong>Executar juntamente ao conselho de comunidade e à coordenação paroquial</strong> as prioridades, as metas e as atividades planejadas.</li>
+                <li><strong>Dinamizar, motivar e convidar</strong> os grupos e pastorais e as pessoas em geral para uma permanente avaliação e articulação.</li>
+                <li><strong>Promover atividades e iniciativas complementares</strong> nas dimensões litúrgico-ministerial, social, organizativa e econômica.</li>
+                <li><strong>Gerenciar e coordenar as atividades de caráter administrativo e formal</strong> mantendo estreita colaboração com a coordenação paroquial.</li>
+                <li><strong>Enfrentar eventuais conflitos internos, tensões, desentendimentos</strong> num clima de diálogo, franqueza, respeito e fraternidade.</li>
+                <li><strong>Animar a comunidade na implementação do processo de Iniciação à Vida Cristã.</strong></li>
+                <li><strong>Ser canal de comunicação</strong> entre a coordenação e secretaria paroquial e a comunidade.</li>
+            </ol>
+            
+            <div class="info-box">
+                <h4><i class="fas fa-user-check"></i> Perfil dos Coordenadores</h4>
+                <p>Os membros da coordenação de comunidade deverão ter uma caminhada consolidada na comunidade de pelo menos 3 ou 4 anos. Que ofereçam um testemunho de vida coerente e que tenham disposição ao serviço, ao diálogo e muita capacidade de lidar com conflitos e diversidade de pensamento.</p>
+            </div>
+            
+            <h2>Principais Funções e Compromissos</h2>
+            <ol>
+                <li>A coordenação da comunidade se reúne normalmente uma vez por mês e, extraordinariamente, toda vez que achar necessário.</li>
+                <li>Avalia a caminhada e fica atenta ao planejamento e à totalidade da vida da comunidade.</li>
+                <li>Prepara a pauta da reunião mensal com o conselho de comunidade, dando-a a conhecer antecipadamente.</li>
+                <li>Mantém diálogo sistemático entre si e com as diferentes equipes para apoiar e fortalecer as atividades.</li>
+                <li>Os membros da coordenação da comunidade não deveriam assumir a coordenação específica de alguma pastoral ou grupo.</li>
+                <li>A coordenação da comunidade é renovada a cada dois anos, podendo ser confirmada por mais um período.</li>
+                <li>Um membro de uma coordenação não aceitará ser reconduzido após ter permanecido mais de dois mandatos seguidos.</li>
+                <li>Quando um membro de uma coordenação vier a faltar por várias vezes seguidas sem justificação, o conselho de comunidade poderá indicar um substituto.</li>
+                <li>Pelo menos uma ou duas vezes ao ano é aconselhável que as coordenações de comunidades de um mesmo setor se encontrem.</li>
+                <li>É próprio de um coordenador/a se manter atualizado, investindo na sua formação bíblica, teológica e humana.</li>
+            </ol>
+        </div>
+        
+        <!-- ========== SEÇÃO 7: DIMENSÃO SOCIAL ========== -->
+        <div class="section" id="social">
+            <h1><i class="fas fa-handshake"></i> 7. Dimensão Social e Partilha</h1>
+            <div class="highlight">
+                <p>A paróquia entende que essa dimensão é importante, pois visa não somente garantir a manutenção da sua estrutura e das suas comunidades, mas a fortalecer os laços de solidariedade e de ajuda recíproca e evitar que existam desigualdades entre as comunidades.</p>
+            </div>
+            
+            <h2>1. Equipe Econômica ou Financeira</h2>
+            <p>Cada comunidade possui a sua equipe econômica ou financeira. Compete a ela coletar, administrar e aplicar o dinheiro das ofertas, dízimo, espórtulas, taxas para sacramentos, doações, bem como fazer prestação de contas.</p>
+            
+            <div class="info-box">
+                <h4><i class="fas fa-money-bill-wave"></i> Taxas dos Sacramentos</h4>
+                <p>A paróquia, em assembleia e por unanimidade, aboliu as taxas dos sacramentos, ficando somente a taxa para o Sacramento do Matrimônio. Em contrapartida, a paróquia se comprometeu em trabalhar mais a dimensão do Dízimo.</p>
+            </div>
+            
+            <h2>2. Distribuição do Dízimo</h2>
+            <p>A equipe econômica da comunidade elabora o balancete da comunidade até o dia 15 de cada mês. Nele deixará:</p>
+            <ul>
+                <li><strong>45%</strong> do dízimo para a comunidade</li>
+                <li><strong>45%</strong> para o Fundo Paroquial</li>
+                <li><strong>10%</strong> para a Arquidiocese</li>
+            </ul>
+            
+            <h2>3. Cantinho do Dízimo</h2>
+            <p>Cada comunidade providenciará e cuidará com amor do 'cantinho do dízimo', garantindo sempre a presença de alguém da equipe antes e depois das celebrações para devolver as carteirinhas, motivar as pessoas e dar esclarecimentos.</p>
+            
+            <h2>4. Contribuições para Missa de 7º Dia</h2>
+            <p>Não será cobrada nenhuma contribuição ao familiar mais próximo, desde que esse seja um dizimista. Aos demais a contribuição na missa de 7º dia continua no valor de R$ 30,00.</p>
+            
+            <h2>5. Prestação de Contas</h2>
+            <p>A equipe econômica terá o cuidado de apresentar regularmente a prestação de conta ao conselho de comunidade, bem como de informar à comunidade na hora dos avisos, sem entrar em todos os detalhes.</p>
+            
+            <h2>6. Administração Financeira</h2>
+            <p>Não pode haver contas pessoais para administrar os recursos e as entradas da comunidade. A comunidade segurará tão somente o dinheiro de caixa necessário para as despesas ordinárias do mês.</p>
+            
+            <h2>7. Rifão Paroquial</h2>
+            <p>A paróquia organiza todo ano, a depender das circunstâncias, um 'rifão' com o intuito de abastecer o Fundo Paroquial. Foi decidido que será promovido sempre por ocasião da Páscoa.</p>
+            
+            <h2>8. Inventário de Bens</h2>
+            <p>Cada comunidade elaborará um inventário de todos os bens móveis (bancos, mesas, cadeiras, ventiladores, etc.) que existem, e uma documentação básica dos terrenos e prédios que lhe pertencem.</p>
+            
+            <h2>9. Contratos de Aluguel</h2>
+            <p>Aquelas comunidades que estão alugando ou emprestando um espaço físico para terceiros deverão estar atentas para que os contratos sejam renovados a cada seis meses.</p>
+            
+            <h2>10. Construções e Reformas</h2>
+            <p>Toda comunidade que desejar ampliar, reformar e construir algo, se o seu orçamento superar os R$ 5.000,00, deverá pedir permissão à Coordenação Paroquial.</p>
+            
+            <h2>11. Projetos para o Fundo Paroquial</h2>
+            <p>As comunidades poderão apresentar ao Fundo Paroquial, até o dia 15 de março de cada ano, pequenos projetos a serem financiados, observando as normas estabelecidas.</p>
+            
+            <div class="info-box">
+                <h4><i class="fas fa-clipboard-list"></i> Elaboração de Miniprojeto</h4>
+                <p>Os projetos devem conter: Nome do Projeto, Objetivo, Justificativa, Prazo de execução, Orçamento pormenorizado, Contrapartida financeira, Contribuição não-financeira e Informações adicionais.</p>
+            </div>
+        </div>
+        
+        <!-- ========== SEÇÃO 8: DIMENSÃO LITÚRGICA ========== -->
+        <div class="section" id="liturgico">
+            <h1><i class="fas fa-pray"></i> 8. Dimensão Litúrgico-Ministerial e Sacramental</h1>
+            
+            <div class="highlight">
+                <p>A dimensão litúrgica é parte essencial da vivência cristã. Daí a importância de não somente preparar com seriedade e criatividade as diferentes celebrações, mas de entrar num permanente processo formativo.</p>
+            </div>
+            
+            <h2>Ministérios e Celebrações</h2>
+            
+            <h3>a. Formação Litúrgica</h3>
+            <p>A paróquia organiza pelo menos um encontro por ano de formação e capacitação litúrgica, onde os responsáveis de cada grupo e/ou pastoral das comunidades devem estar presentes.</p>
+            
+            <h3>b. Ministérios Presentes</h3>
+            <p>Os ministérios presentes na nossa paróquia são os seguintes:</p>
+            <ul>
+                <li><strong>Ministério Extraordinário da Eucarística</strong></li>
+                <li><strong>Ministério da Palavra</strong></li>
+                <li><strong>Ministério da Catequese</strong></li>
+            </ul>
+            <p>A coordenação paroquial iniciará um diálogo para formação de 'auxiliares' do Sacramento do Batismo que poderão se transformar em tempos curtos em 'Ministros do Batismo'.</p>
+            
+            <h3>c. Celebração das Exéquias</h3>
+            <p>Para a celebração das exéquias (encomendação de corpo em velórios, missa de 7º dia ou de aniversário de falecimento), os presbíteros (padres) estão disponíveis para presidir as exéquias acompanhados por algum outro ministro ou membros da comunidade.</p>
+            <p>Recomenda-se não fazer velórios nas igrejas. Onde houver salão comunitário, seja utilizado esse espaço para velório.</p>
+            
+            <h3>d. Indicação de Candidatos a Ministros/as</h3>
+            <p>Os candidatos a ministros/as deverão ser indicados pela comunidade à qual pertencem numa reunião formal e constando numa ata assinada. A coordenação paroquial avaliará e dará o seu parecer por escrito.</p>
+            
+            <h3>e. Formação dos Ministros</h3>
+            <p>A formação dos ministros obedecerá a critérios diocesanos e paroquiais. Os ministros/as deverão participar de formações diocesanas e paroquiais sem as quais não poderão exercer o ministério e receber o envio.</p>
+            
+            <h3>f. Período de Exercício</h3>
+            <p>Cada ministro/a permanecerá no exercício por um período de dois anos podendo ser renovado, após ouvir o parecer da assembleia da comunidade e da coordenação paroquial.</p>
+            
+            <h3>g. Limitação de Ministérios</h3>
+            <p>Na medida do possível um ministro/a não assuma mais do que dois ministérios.</p>
+            
+            <h3>h. Equipes Missionárias</h3>
+            <p>As equipes do batismo, da catequese, as 'famílias de referência e os grupos de oração podem ser um elemento missionário dinamizador da vida comunitária.</p>
+        </div>
+        
+        <!-- ========== SEÇÃO 9: IVC ========== -->
+        <div class="section" id="ivc">
+            <h1><i class="fas fa-bible"></i> 9. Iniciação à Vida Cristã (IVC)</h1>
+            
+            <div class="highlight">
+                <p>O processo de Iniciação à Vida Cristã, por meio da ação catequética, ganhou espaço em outros segmentos pastorais e cresce a consciência de que ela deve ser assumida por toda a Igreja no Brasil.</p>
+            </div>
+            
+            <h2>Contexto Nacional</h2>
+            <p>Desde 2011, a Iniciação à Vida Cristã (IVC) constitui uma das cinco urgências propostas pelas Diretrizes Gerais da Ação Evangelizadora da CNBB. Na 55ª Assembleia dos Bispos do Brasil, em 2017, o tema foi tratado com maior profundidade.</p>
+            
+            <div class="info-box">
+                <h4><i class="fas fa-quote-left"></i> Documento 107 da CNBB</h4>
+                <p>"a Iniciação à Vida Cristã significa imersão em uma nova realidade" (IVC, nº 88)</p>
+            </div>
+            
+            <h2>Implementação na Paróquia</h2>
+            <p>Na assembleia paroquial de pastoral, em 2019, depois de vários estudos, a implantação do projeto de Iniciação à Vida Cristã (IVC) foi adotada como uma das prioridades para o Triênio 2020-2022.</p>
+            <p>Para melhor conhecer o projeto e o itinerário catequético de inspiração catecumenal, foram realizados vários encontros formativos e a composição de uma coordenação paroquial do IVC.</p>
+            
+            <h2>Progresso das Comunidades</h2>
+            <p>Uma das comunidades (Nossa Senhora da Esperança) conseguiu, até 2022, dar bons passos na implementação do IVC, enquanto as demais tiveram várias dificuldades.</p>
+            
+            <h2>Prioridade Contínua</h2>
+            <p>A Iniciação à Vida Cristã (IVC) continua sendo uma prioridade na paróquia e a Comissão Paroquial do IVC ajudará as comunidades a iniciarem ou continuarem esse percurso catequético de inspiração catecumenal, seguindo o Itinerário Catequético Arquidiocesano de Iniciação à Vida Cristã.</p>
+            
+            <h2>Meta de Implantação</h2>
+            <p>A implantação da Iniciação à Vida Cristã (IVC) na paróquia será de forma gradual e se prevê que até o ano 2025 o projeto IVC terá sido implantado em todas as comunidades da paróquia.</p>
+        </div>
+        
+        <!-- ========== SEÇÃO 10: BATISMO ========== -->
+        <div class="section" id="batismo">
+            <h1><i class="fas fa-water"></i> 10. Sacramento do Batismo - Critérios Básicos</h1>
+            
+            <h2>1. Anúncio e Inscrições</h2>
+            <p>A equipe do batismo providenciará em tempo hábil para anunciar o início das inscrições dos candidatos ao batismo. Fará visitas aos pais e padrinhos em caso de o batizando ter menos de oito anos.</p>
+            
+            <h2>2. Crianças com menos de 8 anos</h2>
+            <p>Se for criança com menos de 8 anos, se pede que os pais e padrinhos tenham uma frequência significativa nas celebrações da comunidade e participem de pelo menos três encontros.</p>
+            
+            <h2>3. Cartilha Paroquial</h2>
+            <p>A equipe do batismo é convidada a utilizar a cartilha da paróquia preparada adequadamente para tais encontros, e na medida do possível, que se convide para um desses encontros alguém da coordenação paroquial.</p>
+            
+            <h2>4. Critérios de Admissão</h2>
+            <p>Não é conveniente ser intransigente com os critérios de admissão para pais e padrinhos considerada a história e a nossa realidade concreta, mas que haja muito espírito de acolhida e compreensão.</p>
+            <p>É suficiente um padrinho ou uma madrinha ou os dois. O importante é que um dos dois obedeça aos critérios previstos pelo Direito Canônico nos números 873-874.</p>
+            
+            <h2>5. Condição Mínima</h2>
+            <p>É importante que haja pelo menos um dos pais ou de quem tem a guarda legal (avós, tios, etc.) que seja batizado, bem como um dos dois padrinhos para que a criança possa ser batizada.</p>
+            
+            <h2>6. Estado Civil dos Pais</h2>
+            <p>Não é preciso que os pais e padrinhos do batizando estejam casados no religioso, mas que haja o compromisso de pelo menos um deles de que a criança será educada na fé cristã/católica.</p>
+            <p>O mesmo vale se um dos pais é ateu ou de outra igreja. É suficiente que um dos dois pais ou de quem tem a guarda legal, seja católico, e que tenha autonomia para educar seu filho na fé cristã.</p>
+            
+            <div class="info-box">
+                <h4><i class="fas fa-handshake"></i> Compromisso de Educação na Fé</h4>
+                <p>O elemento essencial para o batismo de crianças é o compromisso de pelo menos um dos pais ou responsáveis legais em educar a criança na fé cristã católica.</p>
+            </div>
+            
+            <h2>7. Padrinhos fora da Paróquia</h2>
+            <p>Para aqueles padrinhos que queiram apadrinhar fora da paróquia para obter a declaração deverão participar de pelo menos 03 celebrações da comunidade e pela declaração se pedirá a colaboração de R$ 20,00.</p>
+            
+            <h2>8. Batismo em outra Paróquia</h2>
+            <p>Para os pais que queiram batizar a criança numa outra paróquia deverão atender às mesmas condições de quem batiza na paróquia, observando que para a transferência se pedirá uma colaboração de R$ 30,00.</p>
+            
+            <h2>9. Crianças acima de 8 anos</h2>
+            <p>Se o batizando for uma criança acima de 8 anos (até os 16 anos) ela será convidada a participar da catequese por um período de dois anos, e será considerada 'religiosamente adulta'.</p>
+            
+            <h2>10. Adultos acima de 16 anos</h2>
+            <p>Um adulto, acima de 16 anos, que queira ser batizado será acompanhado de forma personalizada por um/a catequista, ou na catequese para adultos, ou na participação às celebrações ou mediante encontros específicos por um período de pelo menos seis meses.</p>
+            
+            <h2>11. Dispensa de Preparação</h2>
+            <p>A coordenação não exigirá a participação obrigatória em preparação ao batismo para aqueles padrinhos e/ou pais que possuem já uma vivência ativa e sistemática na comunidade.</p>
+            
+            <h2>12. Padrinhos dentro da Paróquia</h2>
+            <p>Coordenadores, ministros ou participantes ativos de uma comunidade da nossa paróquia que são chamados a ser padrinhos numa outra comunidade da nossa paróquia não precisam de declaração do pároco, mas tão somente uma declaração da coordenação da sua comunidade.</p>
+        </div>
+        
+        <!-- ========== SEÇÃO 11: EUCARISTIA ========== -->
+        <div class="section" id="eucaristia">
+            <h1><i class="fas fa-bread-slice"></i> 11. Primeira Eucaristia e Eucaristia para os Não Casados</h1>
+            
+            <h2>1. Primeira Eucaristia para menores de 16 anos</h2>
+            <p>Deverá existir uma participação ativa na catequese por um período de dois anos, desde que nunca tenham participado anteriormente da catequese.</p>
+            <p>Para aqueles candidatos que vêm participando da catequese desde cedo, desde os 6-7 anos, por exemplo, se avaliará a sua maturidade. Nesse caso a sua admissão à eucaristia poderá ocorrer naturalmente sem colocar a condição rígida dos dois anos.</p>
+            
+            <h2>2. Adultos</h2>
+            <p>Vale o que foi colocado a respeito do batismo, ou seja, que participe da catequese para adultos por pelo menos seis meses, lá onde existe, ou que tenha um acompanhamento personalizado e sem deixar de participar das celebrações comunitárias.</p>
+            <p>Pede-se que sejam observadas as orientações da Iniciação à Vida Cristã.</p>
+            
+            <h2>3. Adultos não casados</h2>
+            <p>Se o adulto não estiver casado, é conveniente fazer a proposta de se casar, lá onde é permitido e que não exista nenhum tipo de impedimento, mas que isso não seja motivo para recusar a sua admissão ao sacramento.</p>
+            <p>O responsável pelo seu acompanhamento formativo-catequético, contudo, juntamente com os padres, avaliará a sua vivência na família e com a companheira/o.</p>
+            
+            <h2>4. Pessoas em união estável</h2>
+            <p>Para aquelas pessoas que vêm tendo participação nas celebrações e engajamento na comunidade, que vivem há mais de três anos com o companheiro/a, e que assumam a sua responsabilidade para com seus filhos do casamento anterior (mesmo aqueles que não vivem com ele/a) e que desejam comungar, pede-se que sejam acompanhadas mediante alguns encontros catequéticos, não lhes sejam colocadas outras condições.</p>
+            
+            <div class="info-box">
+                <h4><i class="fas fa-heart"></i> Pastoral de Acolhida</h4>
+                <p>A paróquia busca acolher todas as pessoas em sua realidade concreta, valorizando o caminho de fé percorrido e oferecendo acompanhamento adequado para o amadurecimento na vida sacramental.</p>
+            </div>
+        </div>
+        
+        <!-- ========== SEÇÃO 12: CONFIRMAÇÃO ========== -->
+        <div class="section" id="confirmacao">
+            <h1><i class="fas fa-dove"></i> 12. Sacramento da Confirmação</h1>
+            
+            <h2>1. Candidatos com menos de 16 anos</h2>
+            <p>A preparação para os candidatos à Confirmação com idade inferior aos 16 anos seguirá os mesmos critérios utilizados até agora. Pede-se que sejam observadas as orientações da Iniciação à Vida Cristã.</p>
+            
+            <h2>2. Candidatos acima de 16 anos</h2>
+            <p>Os responsáveis pela formação deverão estar atentos para que todos os candidatos que têm idade acima de 16 anos, estejam batizados e tenham feito a primeira comunhão.</p>
+            <p>Caso alguém ainda não tenha recebido a primeira comunhão poderá receber na mesma celebração os dois sacramentos.</p>
+            
+            <h2>3. Adultos não confirmados</h2>
+            <p>Aqueles adultos que vêm participando da comunidade há muitos anos e nunca foram confirmados poderão fazê-lo, não lhes sendo pedido nada mais, além da sua sistemática participação.</p>
+            
+            <h2>4. Preparação Específica</h2>
+            <p>É conveniente que antes da celebração haja alguns momentos formativos específicos com alguém da coordenação paroquial, um retiro espiritual e a reconciliação.</p>
+            
+            <h2>5. Candidatos não casados</h2>
+            <p>Aqueles candidatos à Confirmação que não são casados, vale o que se disse a respeito da Eucaristia, ou seja, que tenham responsabilidade para com os filhos e convivência harmoniosa superior a três anos.</p>
+            
+            <div class="info-box">
+                <h4><i class="fas fa-fire"></i> Espírito Santo e Missão</h4>
+                <p>O sacramento da Confirmação completa a graça batismal e concede uma efusão especial do Espírito Santo, capacitando o cristão para testemunhar a fé com maior fortaleza e para assumir responsabilidades na comunidade eclesial.</p>
+            </div>
+        </div>
+        
+        <!-- ========== SEÇÃO 13: MATRIMÔNIO ========== -->
+        <div class="section" id="matrimonio">
+            <h1><i class="fas fa-ring"></i> 13. Sacramento do Matrimônio</h1>
+            
+            <h2>Parte Burocrática - Documentação Necessária</h2>
+            <ol>
+                <li>Fotocópia da Certidão de Nascimento dos noivos.</li>
+                <li>Fotocópia da Carteira de Identidade.</li>
+                <li>Fotocópia da Certidão do Casamento, caso estejam já casados no civil.</li>
+                <li>Fotocópia da Certidão de Batismo.</li>
+                <li>Fotocópia de Comprovante de Residência (água, luz, telefone...)</li>
+                <li>Dar entrada no cartório, se o casal deseja que o matrimônio religioso tenha efeito civil.</li>
+            </ol>
+            
+            <h2>Parte Pastoral</h2>
+            
+            <h3>1. Verificação de Situação Matrimonial Anterior</h3>
+            <p>Procurar se já se casaram alguma vez, no religioso ou no civil, lembrando que em caso positivo, deverão conversar com um dos padres para esclarecer a situação.</p>
+            
+            <h3>2. Primeira Comunhão</h3>
+            <p>Procurar se os noivos já fizeram a primeira comunhão.</p>
+            
+            <h3>3. Preparação de Noivos</h3>
+            <p>Participar da preparação de noivos como prevista pela paróquia e conduzida pela Pastoral Familiar, lembrando que um dos padres também deverá ter um encontro pessoal com os noivos.</p>
+            
+            <h3>4. Características do Matrimônio Católico</h3>
+            <p>É importante que na preparação seja claro que o casamento religioso católico deve ser realizado:</p>
+            <ul>
+                <li><strong>Em plena liberdade e espontaneidade</strong> (sem ameaças ou coação).</li>
+                <li><strong>Por toda a vida</strong>, mesmo que no futuro, por motivos graves, o casamento possa ser anulado.</li>
+                <li>Onde os dois se <strong>comprometem a se amarem e respeitarem de forma fiel.</strong></li>
+                <li>Disposição em <strong>acolher os filhos que eles gerarem mediante paternidade e maternidade responsáveis.</strong></li>
+            </ul>
+            
+            <h3>5. Comunicação às Paróquias de Origem</h3>
+            <p>Uma vez realizado o matrimônio, a secretária paroquial comunicará o ato às respectivas paróquias de origem (onde o nubente foi batizado).</p>
+            
+            <h3>6. Casamento Misto</h3>
+            <p>A Igreja Católica aceita e consagra o casamento entre um católico e um membro de outra igreja ou um ateu, desde que sejam preenchidas algumas condições. Para esses casos é só falar com o padre responsável da paróquia.</p>
+            
+            <div class="info-box">
+                <h4><i class="fas fa-church"></i> Significado Sacramental</h4>
+                <p>O Matrimônio cristão é um sacramento que santifica a união entre um homem e uma mulher, tornando-a sinal do amor de Cristo pela Igreja. Por isso exige preparação adequada e disposição para viver os compromissos assumidos.</p>
+            </div>
+        </div>
+        
+        <!-- ========== SEÇÃO 14: CONCLUSÃO ========== -->
+        <div class="section" id="conclusao">
+            <h1><i class="fas fa-flag-checkered"></i> 14. Conclusão</h1>
+            
+            <div class="highlight">
+                <p>O presente diretório foi inicialmente elaborado e aprovado em assembleia paroquial no dia 30 de novembro de 2014 e adotado em caráter experimental por um ano, sendo finalmente aprovado na assembleia paroquial de 2015.</p>
+            </div>
+            
+            <p>Decorridos alguns anos, houve a necessidade de ser atualizado, o que ocorreu no dia 04 de dezembro na assembleia paroquial de 2022, data em que este diretório entra em vigor.</p>
+            
+            <div class="info-box">
+                <h4><i class="fas fa-calendar-check"></i> Data de Vigência</h4>
+                <p>Este diretório entrou em vigor em <strong>04 de dezembro de 2022</strong>, após aprovação na assembleia paroquial.</p>
+            </div>
+            
+            <h2>Caráter do Documento</h2>
+            <p>Este diretório paroquial não pretende ser um documento concluso e fechado, mas uma referência para a pastoral e administração paroquial, um documento que está sempre em construção e atualização.</p>
+            
+            <p>Expressa a vivência de fé, reflexão e discernimento da comunidade paroquial ao longo dos anos, sistematizando as principais decisões, orientações, dicas e sugestões que emergiram nas diferentes dimensões pastorais.</p>
+            
+            <h2>Confiança na Intercessão</h2>
+            <p>Confiamos esse diretório paroquial e a nossa missão à intercessão da Santa Virgem Maria e de São Daniel Comboni, pedindo que nos acompanhem em nossa caminhada de fé e serviço à comunidade.</p>
+            
+            <div class="info-box">
+                <h4><i class="fas fa-map-signs"></i> Para o Futuro</h4>
+                <p>Que este diretório seja um instrumento vivo que oriente e inspire a ação pastoral da Paróquia São Daniel Comboni nos próximos anos, sempre aberto aos novos desafios e inspirações do Espírito Santo.</p>
+            </div>
+            
+            <p style="text-align: center; font-weight: bold; margin-top: 30px; padding-top: 20px; border-top: 2px solid var(--tab14-color);">
+                São Luís, 04 de dezembro de 2022.
+            </p>
+        </div>
+        
+        <!-- RODAPÉ -->
+        <footer>
+            <p><strong>Diretório Paroquial 2022</strong></p>
+            <p>Paróquia São Daniel Comboni - Arquidiocese de São Luís</p>
+            <p>Vila Embratel - São Luís - Maranhão</p>
+            <p style="margin-top: 10px; color: #4a8c4a; font-weight: bold;">
+                Documento aprovado em assembleia paroquial em 04 de dezembro de 2022
+            </p>
+            <p style="font-size: 12px; margin-top: 15px; color: #888;">
+                <i class="fas fa-mobile-alt"></i> Versão otimizada para smartphones | 
+                <i class="fas fa-globe"></i> Acessível por link público
+            </p>
+        </footer>
+    </div>
+    
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <button id="backToTop" title="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script>
+        // FUNÇÕES PRINCIPAIS
+        function generatePDF() {
+            alert('📱 Para gerar PDF otimizado:\n\n1. No diálogo de impressão, selecione "Salvar como PDF"\n2. Escolha orientação: "Retrato"\n3. Margens: "Padrão" ou "Mínimo"\n4. Desmarque: "Cabeçalhos e rodapés"');
+            setTimeout(() => {
+                window.print();
+            }, 500);
+        }
+        
+        // NAVEGAÇÃO SUAVE PELO ÍNDICE
         document.querySelectorAll('#indice a').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href').substring(1);
                 const targetElement = document.getElementById(targetId);
                 if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
                 }
             });
         });
         
-        // Botão voltar ao topo
-        const backBtn = document.createElement('button');
-        backBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-        backBtn.style.cssText = 'position:fixed;bottom:20px;right:20px;background:#2c5e92;color:#fff;border:none;border-radius:50%;width:50px;height:50px;font-size:20px;cursor:pointer;box-shadow:0 4px 8px rgba(0,0,0,0.2);display:none;z-index:1000;align-items:center;justify-content:center;';
-        backBtn.onclick = () => window.scrollTo({top:0,behavior:'smooth'});
-        document.body.appendChild(backBtn);
+        // BOTÃO VOLTAR AO TOPO
+        const backToTopBtn = document.getElementById('backToTop');
         window.addEventListener('scroll', () => {
-            backBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+            if (window.scrollY > 300) {
+                backToTopBtn.style.display = 'flex';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // DESTACAR SEÇÃO ATUAL NO ÍNDICE
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.section');
+            const scrollPosition = window.scrollY + 100;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    // Atualizar link ativo no índice
+                    document.querySelectorAll('#indice a').forEach(link => {
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.style.fontWeight = 'bold';
+                            link.style.color = '#1a3a5f';
+                        } else {
+                            link.style.fontWeight = 'normal';
+                            link.style.color = '#2c5e92';
+                        }
+                    });
+                }
+            });
+        });
+        
+        // INICIALIZAÇÃO
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Diretório Paroquial 2022 - Carregado com sucesso!');
+            
+            // Destacar mês atual na tabela (opcional)
+            const months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 
+                           'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+            const currentMonth = new Date().getMonth();
+            const currentMonthName = months[currentMonth];
+            
+            document.querySelectorAll('table td').forEach(cell => {
+                if (cell.textContent.trim() === currentMonthName) {
+                    cell.style.backgroundColor = '#e8f5e8';
+                    cell.style.fontWeight = 'bold';
+                    cell.title = 'Mês festivo atual';
+                }
+            });
         });
     </script>
 </body>
